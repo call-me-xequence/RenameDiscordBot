@@ -120,12 +120,12 @@ async def help_command(ctx):
 
 # Запуск бота
 if __name__ == "__main__":
-    token = os.getenv('BOT_TOKEN')
+    token = os.getenv('API_TOKEN')
 
     if not token:
         print("❌ ОШИБКА: Токен не найден в файле .env")
         print("Создайте файл .env в папке с ботом и добавьте:")
-        print("BOT_TOKEN=ваш_токен_бота")
+        print("API_TOKEN=ваш_токен_бота")
     else:
         print("🚀 Запуск бота...")
         print("=" * 50)

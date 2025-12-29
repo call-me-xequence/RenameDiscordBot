@@ -2,9 +2,6 @@ import discord
 from discord.ext import commands
 import os
 
-# Загрузка переменных окружения
-load_dotenv()
-
 # ВАЖНО: Настраиваем все необходимые intents
 intents = discord.Intents.default()
 intents.members = True  # Включаем доступ к участникам

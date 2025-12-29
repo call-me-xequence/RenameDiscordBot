@@ -120,7 +120,14 @@ async def help_command(ctx):
 
 # Запуск бота
 if __name__ == "__main__":
-    token = os.getenv('API_TOKEN')
+    # Сначала пробуем получить из переменных окружения (для хостинга)
+    token = os.environ.get('API_TOKEN')
+
+    # Если нет, пробуем из .env (для локальной разработки)
+    if not token:
+        from dotenv import load_dotenv
+        load_dotenv()
+        token = os.getenv('DISCORD_TOKEN')
 
     if not token:
         print("❌ ОШИБКА: Токен не найден в файле .env")

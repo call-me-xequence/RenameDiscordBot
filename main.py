@@ -117,7 +117,7 @@ async def help_command(ctx):
 # Запуск бота
 if __name__ == "__main__":
     # Сначала пробуем получить из переменных окружения (для хостинга)
-    token = os.environ.get('API_TOKEN')
+    token = os.environ.get('BOT_TOKEN')
 
     # Если нет, пробуем из .env (для локальной разработки)
     if not token:
